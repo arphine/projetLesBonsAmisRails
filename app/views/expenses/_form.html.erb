@@ -1,0 +1,80 @@
+
+<div class="panel panel-default" style="width:500px;margin-left:auto;margin-right:auto;">
+  <div class="panel-heading">
+    <h1 class="panel-title" >Nouvelle dépense</h1>
+  </div>
+
+  <div class="panel-body">
+    <%= form_with(model: expense, local: true) do |form| %>
+    <% if expense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+      <ul>
+        <% expense.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <table class="table">
+      <tr>
+        <td>
+          <%= form.label 'Titre' %>
+        </td>
+        <td>
+          <%= form.text_field :name, id: :expense_name,  :required => true %>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          <%= form.label 'Montant en euros' %>
+        </td>
+        <td>
+          <%= form.text_field :amount_money, id: :expense_amount_money,  step: :any,  :required => true %>
+        </td>
+      </tr>
+
+      <tr>
+        <td >
+          <%= form.label :payeur_id %>
+        </td>
+        <td>
+          <!-- <%= form.collection_select :payeur_id, User.all, :id, :email, default: current_user.id %> -->
+          <%= form.select :payeur_id, ([[current_user.firstname, current_user.id]]) %>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <%= form.label "Bénéficiaires" %>
+        </td>
+        <td>
+          <%= form.collection_check_boxes :user_ids, User.all, :id , :firstname do |b| %>
+          <div class="collection-check-box">
+            <tr>
+              <td>
+                <%= b.label %>
+              </td>
+              <td>
+                <%= b.check_box checked:(b.object.id == current_user.id)  %>
+              </td>
+            </tr>
+          </div>
+          <% end %>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" text>
+          <%= form.submit "Valider", class: "btn btn-success", style:"color:white" %>
+        </td>
+      </tr>
+
+    </table>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div style="text-align:center;width:50%;margin-left:auto;margin-right:auto;padding:10px;">
+
+
+  <br><br>
+
+  <div class="panel panel-default" style="text-align:center;">
+    <div class="panel-heading">
+      <h3 class="panel-title" >Balance</h3>
+    </div>
+    <div class="panel-body">
+      <% if @balance < 0 %>
+      <center><h3><%= @friend.firstname %> te doit <%= @balance * (-1) %> € </center></h3>
+      <% else %>
+      <center><h3>Tu doit <%= @balance %> € à <%= @friend.firstname %></h3></center>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to "Retour", friends_path, class: "btn btn-danger",style: "color:white" %>
+
+</div>

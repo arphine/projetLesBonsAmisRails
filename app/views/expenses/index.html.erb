@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>Les Dépenses</h1>
+
+  <%= link_to "Ajouter une dépense", new_expense_path, class: "btn btn-danger", style:"color:white"%>
+
+  <div style="margin-top:50px;">
+    <h2>Historique des dépenses</h2>
+    <p>Liste des dépenses auxquelles je suis affécté.e.</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr style="text-align:center;" class="success">
+          <th style="text-align:center;bac">Titre</th>
+          <th style="text-align:center;">Montant</th>
+          <th style="text-align:center;">Payeur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @expenses.each do |expense| %>
+        <% if expense.payeur_id != current_user.id %>
+        <% expense.users.each do |usr| %>
+        <% if usr.id == current_user.id %>
+        <tr>
+          <td><%= expense.name %></td>
+          <td><%= expense.amount_money %></td>
+          <td><%= expense.payeur.firstname %></td>
+          <td><%= link_to 'Détails', expense %></td>
+        </tr>
+        <% end %>
+        <% end %>
+        <% end %>
+        <% end %>
+
+
+      </tbody>
+    </table>
+  </div>
+  <!-- <%= link_to 'New Expense', new_expense_path %> -->
+
+
+  <div style="margin-top:50px;">
+    <h2>Modifier une dépenses</h2>
+    <p>Modifier une dépense dont je suis l'auteur.e.</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="success">
+          <th style="text-align:center;bac">Titre</th>
+          <th style="text-align:center;bac">Montant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @expenses.each do |expense| %>
+        <% if expense.payeur_id == current_user.id %>
+        <tr>
+          <td><%= expense.name %></td>
+          <td><%= expense.amount_money %></td>
+          <td><%= link_to 'Détails', expense %></td>
+          <td><%= link_to 'Modifier', edit_expense_path(expense) %></td>
+          <td><%= link_to 'Supprimer', expense, method: :delete, data: { confirm: 'Vous etes sur ?' } %></td>
+        </tr>
+        <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>

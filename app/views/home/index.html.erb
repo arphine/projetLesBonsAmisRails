@@ -1,0 +1,23 @@
+
+<div style="text-align:center;">
+<h1 style="font-size:5em;;">Les Bons Amis</h1>
+<br><br><br><br>
+
+<h1 style="text-align:center;"><%= current_user.firstname %></h1>
+
+<%= link_to "Ajouter une dépense", new_expense_path, class: "btn btn-danger", style:"color:white"%>
+
+</div>
+<br><br><br>
+<% if user_signed_in? %>
+<div class="panel panel-default" style="text-align:center;">
+  <div class="panel-heading">
+    <h3 class="panel-title" >Balance globale</h3>
+  </div>
+  <div class="panel-body">
+    <p style="font-size:3em;"><%= @balance %> €</p>
+    <br>
+    <p>Tes amis te doivent <%= @totalPaidByFriends %> €<br>Tu dois <%= @totalPaidForFriends %> € à tes amis</p>
+  </div>
+</div>
+<% end %>

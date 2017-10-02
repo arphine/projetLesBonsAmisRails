@@ -1,0 +1,23 @@
+
+<div style="text-align:center;width:50%;margin-left:auto;margin-right:auto;padding:10px;">
+
+  <div class="hero-unit">
+    <h1 style="font-size:2em;">Balance vis à vis d'un.e ami.e</h1>
+  </div>
+
+  <br><br>
+
+  <div class="panel panel-default" style="text-align:center;">
+    <div class="panel-heading">
+      <h3 class="panel-title" >Veuillez choisir un.e ami.e</h3>
+    </div>
+    <div class="panel-body">
+      <% @users.each do |user| %>
+      <% if user.id != current_user.id %>
+      <p><a href="/friends/<%= user.id %>" class="list-group-item"><%= user.firstname %></a></p>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

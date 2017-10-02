@@ -1,0 +1,32 @@
+<nav class="navbar navbar-fixed-top navbar-default" role="navigation" style="height:120px;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsable">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">LesBonsAmis</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapsable">
+      <ul class="nav navbar-nav foo" id="menu">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/expenses">Depenses</a></li>
+        <li><a href="/friends">Amis</a></li>
+
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right" align="right">
+
+        <% if !user_signed_in? %>
+        <li><a href="/logout"><%= link_to "Connexion", new_user_session_path, class: "btn btn-primary", style:"color:white" %></a></li>
+        <br>
+        <%= link_to "Création de Compte", new_user_registration_path %>
+        <% else %>
+        <li><a href="/logout"><%= link_to "Deconnexion", destroy_user_session_path, :method => :delete,class: "btn btn-danger", style:"color:white" %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
