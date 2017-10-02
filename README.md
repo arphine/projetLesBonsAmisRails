@@ -24,20 +24,20 @@ gem 'jbuilder' 2.5 <br/>
 gem 'devise' <br/>
 gem 'money-rails' 1 <br/>
 
-* Group :development, :test do. 
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]. 
-  gem 'capybara', '~> 2.13'. 
-  gem 'selenium-webdriver'. 
-end. 
+* Group :development, :test do <br/>
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] <br/>
+  gem 'capybara', '~> 2.13' <br/>
+  gem 'selenium-webdriver' <br/>
+  end <br/>
 
-group :development do. 
-  gem 'web-console', '>= 3.3.0'. 
-  gem 'listen', '>= 3.0.5', '< 3.2'  
-  gem 'spring'. 
-  gem 'spring-watcher-listen', '~> 2.0.0'. 
-end. 
+* Group :development do <br/>
+  gem 'web-console', '>= 3.3.0' <br/>
+  gem 'listen', '>= 3.0.5', '< 3.2' <br/>
+  gem 'spring' <br/>
+  gem 'spring-watcher-listen', '~> 2.0.0' <br/>
+end <br/>
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]. 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] <br/>
 
 
 
@@ -51,11 +51,11 @@ rake db:migrate <br/>
 rake db:seed <br/>
 
 * Deployment <br/>
-rails server <br/><br/>
+rails server <br/>
 
 Command for testing : <br/>
 
 * Test Environnement <br/>
-rails console <br/><br/>
+rails console <br/>
 
 
