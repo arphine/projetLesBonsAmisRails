@@ -10,12 +10,12 @@ ruby 2.4.1p111 (2017-03-22 revision 58053)
 sqlite3 3.16.0 2016-11-04
 
 
-* Rails version
-Rails 5.1.4
+* Rails version. <br/>
+Rails 5.1.4. <br/>
 
 
 * System dependencies
-gem 'rails', '~> 5.1.4'. 
+gem 'rails', '~> 5.1.4'. <br/>
 gem 'pg'  
 gem 'puma', '~> 3.7'. 
 gem 'bootstrap-sass', '~> 3.3.6'. 
