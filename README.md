@@ -1,31 +1,31 @@
 # README
 
-Application Prototype  "Les Bons Amis"
+Application Prototype  "Les Bons Amis". <br/>
 
-* Ruby version
-ruby 2.4.1p111 (2017-03-22 revision 58053)
+* Ruby version. <br/>
+ruby 2.4.1p111. <br/><br/>
 
 
-* Database version
-sqlite3 3.16.0 2016-11-04
+* Database version. <br/>
+Sqlite3 3.16.0. <br/><br/>
 
 
 * Rails version. <br/>
-Rails 5.1.4. <br/>
+Rails 5.1.4  <br/><br/>
 
 
-* System dependencies
-gem 'rails', '~> 5.1.4'. <br/>
-gem 'pg'  
-gem 'puma', '~> 3.7'. 
-gem 'bootstrap-sass', '~> 3.3.6'. 
-gem 'sass-rails', '~> 5.0'. 
-gem 'uglifier', '>= 1.3.0'. 
-gem 'coffee-rails', '~> 4.2'. 
-gem 'turbolinks', '~> 5'  
-gem 'jbuilder', '~> 2.5'. 
-gem 'devise'. 
-gem 'money-rails', '~>1'. 
+* System dependencies <br/>
+gem 'rails', '~> 5.1.4' <br/>
+gem 'pg'  <br/>
+gem 'puma', '~> 3.7' <br/>
+gem 'bootstrap-sass', '~> 3.3.6' <br/>
+gem 'sass-rails', '~> 5.0' <br/>
+gem 'uglifier', '>= 1.3.0' <br/>
+gem 'coffee-rails', '~> 4.2' <br/>
+gem 'turbolinks', '~> 5'  <br/>
+gem 'jbuilder', '~> 2.5' <br/>
+gem 'devise' <br/>
+gem 'money-rails', '~>1' <br/><br/>
 
 group :development, :test do. 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]. 
