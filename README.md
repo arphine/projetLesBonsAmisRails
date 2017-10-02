@@ -58,4 +58,28 @@ Command for testing : <br/>
 * Test Environnement <br/>
 rails console <br/>
 
+Steps for deploy to Huroku : <br/>
 
+* Sign up heroku <br/>
+
+* Install Heroku Toolbelt <br/>
+
+* Open terminale <br/>
+
+* Heroku login <br/>
+
+* Change gem 'sqlite3' to 'pg' <br/>
+
+* Update file database.yml <br/>
+
+* Bundle Install <br/>
+
+* Heroku create <br/>
+
+* Git push heroku master <br/>
+
+* Heroku run rake db:migrate <br/>
+
+* Heroku run rake db:seed <br/>
+
+* Heroku open
