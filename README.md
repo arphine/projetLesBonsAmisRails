@@ -1,15 +1,15 @@
 # README
 
-Application Prototype  "Les Bons Amis". <br/>
+Application Prototype  "Les Bons Amis" <br/>
 
 * Ruby version. <br/>
-ruby 2.4.1p111. <br/><br/>
+ruby 2.4.1p111. <br/>
 
 * Database version. <br/>
-Sqlite3 3.16.0. <br/><br/>
+Sqlite3 3.16.0. <br/>
 
 * Rails version. <br/>
-Rails 5.1.4  <br/><br/>
+Rails 5.1.4  <br/>
 
 * System dependencies <br/>
 gem 'rails' 5.1.4 <br/>
@@ -22,9 +22,9 @@ gem 'coffee-rails' 4.2 <br/>
 gem 'turbolinks' 5  <br/>
 gem 'jbuilder' 2.5 <br/>
 gem 'devise' <br/>
-gem 'money-rails' 1 <br/><br/>
+gem 'money-rails' 1 <br/>
 
-group :development, :test do. 
+* Group :development, :test do. 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]. 
   gem 'capybara', '~> 2.13'. 
   gem 'selenium-webdriver'. 
@@ -41,19 +41,21 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby].
 
 
 
-Steps for setup and run project :  
+Steps for setup and run project :  <br/>
 
-* Install environment. 
-bundle install. 
+* Install environment <br/>
+bundle install <br/>
 
-* Database creation and initialization  
-rake db:migrate. 
-rake db:seed. 
+* Database creation and initialization   <br/>
+rake db:migrate <br/>
+rake db:seed <br/>
 
-* Deployment. 
-rails server. 
+* Deployment <br/>
+rails server <br/><br/>
 
-Command for testing :  
+Command for testing : <br/>
 
-* Test Environnement. 
-rails console. 
+* Test Environnement <br/>
+rails console <br/><br/>
+
+
