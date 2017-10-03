@@ -25,7 +25,7 @@ class Expense < ApplicationRecord
   # Business logic Methods
 
   def self.getDifferenceExpenceBetweenFriends(friend1, friend2)
-    amount = 0
+    amount = Money.new(0)
     Expense.all.each do |exp|
       totalBeneficiaries =  exp.users.size
       if(exp.payeur_id == friend1.id)
@@ -41,7 +41,7 @@ class Expense < ApplicationRecord
 
 
   def self.totalPaidByFriends(currentUser)
-    amount = 0
+    amount = Money.new(0)
     Expense.all.each do |exp|
       totalFriends =  exp.users.size
       if (currentUser.id == exp.payeur_id)
@@ -57,7 +57,7 @@ class Expense < ApplicationRecord
 
 
   def self.totalPaidForFriends(currentUser)
-    amount = 0
+    amount = Money.new(0)
     Expense.all.each do |exp|
       totalFriends =  exp.users.size
       if (currentUser.id != exp.payeur_id)
