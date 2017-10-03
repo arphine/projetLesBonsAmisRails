@@ -8,10 +8,12 @@
       <h3 class="panel-title" >Balance</h3>
     </div>
     <div class="panel-body">
-      <% if @balance < 0 %>
-      <center><h3><%= @friend.firstname %> te doit <%= @balance * (-1) %> € </center></h3>
+       <% if @balance < 0 %>
+      <center><h3>Tu doit <%= @balance * (-1) %> € à <%= @friend.firstname %></h3></center>
+      <% elsif %>
+      <center><h3><%= @friend.firstname %> te doit <%= @balance  %> € </center></h3>
       <% else %>
-      <center><h3>Tu doit <%= @balance %> € à <%= @friend.firstname %></h3></center>
+      <center><h3> Aucunes dépenses entre vous. </center></h3>
       <% end %>
     </div>
   </div>
